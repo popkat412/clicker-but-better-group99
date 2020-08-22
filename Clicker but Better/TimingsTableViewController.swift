@@ -10,7 +10,7 @@ import UIKit
 
 class TimingsTableViewController: UITableViewController {
     
-    var timings = [1, 2]
+    var timings = [1.0, 2.0]
 
     override func viewDidLoad() {
         super.viewDidLoad()

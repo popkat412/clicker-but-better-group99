@@ -14,15 +14,15 @@ class ClickerViewController: UIViewController {
     @IBOutlet weak var instructionLabel: UILabel!
     
     var count = 0
-    var secondsPassed = 0
+    var secondsPassed = 0.0
     
     var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            self.secondsPassed += 1
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            self.secondsPassed += 0.1
             print("Updating timer: \(self.secondsPassed)")
         }
     }
@@ -33,7 +33,7 @@ class ClickerViewController: UIViewController {
         
         if count >= 20 {
             timer.invalidate()
-            clickerLabel.text = "You took \(secondsPassed)s"
+            clickerLabel.text = "You took \(round(secondsPassed * 100) / 100)s"
             instructionLabel.isHidden = true
         }
     }
