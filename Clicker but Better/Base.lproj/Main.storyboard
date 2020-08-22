@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Efb-S8-6Jq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mZx-Wi-kBz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -12,17 +12,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ClickerViewController" customModule="Clicker_but_Better" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNx-ev-XbR">
-                                <rect key="frame" x="0.0" y="429" width="414" height="48"/>
+                                <rect key="frame" x="0.0" y="380" width="414" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to count to 20 as fast as you can" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqN-Y1-g44">
-                                <rect key="frame" x="66.5" y="807" width="281" height="21"/>
+                                <rect key="frame" x="66.5" y="753" width="281" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,9 +54,9 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="107" y="167"/>
+            <point key="canvasLocation" x="1015.9420289855074" y="166.74107142857142"/>
         </scene>
-        <!--Timings Table View Controller-->
+        <!--Clicker Timings-->
         <scene sceneID="APH-wE-hNJ">
             <objects>
                 <tableViewController id="Efb-S8-6Jq" customClass="TimingsTableViewController" customModule="Clicker_but_Better" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,8 +79,33 @@
                             <outlet property="delegate" destination="Efb-S8-6Jq" id="LRx-ds-BX1"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Clicker Timings" id="Fqk-5M-xAK">
+                        <barButtonItem key="rightBarButtonItem" title="Play" id="tOx-hk-dov">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="yCn-sW-Njx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZJ-0D-3d1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215.94202898550725" y="167.41071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hp1-6P-Fn3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mZx-Wi-kBz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MSu-B9-6ps">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Efb-S8-6Jq" kind="relationship" relationship="rootViewController" id="WF2-wX-JTh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDj-D2-NVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-694.20289855072474" y="167.41071428571428"/>
         </scene>
