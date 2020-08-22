@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C6161FE24F0C56700595BA0 /* TimingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6161FD24F0C56700595BA0 /* TimingsTableViewController.swift */; };
 		62F3F04924F0B8B80011F27C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F3F04824F0B8B80011F27C /* AppDelegate.swift */; };
 		62F3F04B24F0B8B80011F27C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F3F04A24F0B8B80011F27C /* SceneDelegate.swift */; };
 		62F3F04D24F0B8B80011F27C /* ClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F3F04C24F0B8B80011F27C /* ClickerViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C6161FD24F0C56700595BA0 /* TimingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingsTableViewController.swift; sourceTree = "<group>"; };
 		62F3F04524F0B8B80011F27C /* Clicker but Better.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clicker but Better.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F3F04824F0B8B80011F27C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62F3F04A24F0B8B80011F27C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				62F3F04A24F0B8B80011F27C /* SceneDelegate.swift */,
 				62F3F04C24F0B8B80011F27C /* ClickerViewController.swift */,
 				62F3F04E24F0B8B80011F27C /* Main.storyboard */,
+				4C6161FD24F0C56700595BA0 /* TimingsTableViewController.swift */,
 				62F3F05124F0B8BC0011F27C /* Assets.xcassets */,
 				62F3F05324F0B8BC0011F27C /* LaunchScreen.storyboard */,
 				62F3F05624F0B8BC0011F27C /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				62F3F04D24F0B8B80011F27C /* ClickerViewController.swift in Sources */,
 				62F3F04924F0B8B80011F27C /* AppDelegate.swift in Sources */,
+				4C6161FE24F0C56700595BA0 /* TimingsTableViewController.swift in Sources */,
 				62F3F04B24F0B8B80011F27C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
