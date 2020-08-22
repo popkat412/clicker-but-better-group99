@@ -10,7 +10,7 @@ import UIKit
 
 class ClickerViewController: UIViewController {
 
-    @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var clickerLabel: UILabel!
     var count = 0
     
     override func viewDidLoad() {
@@ -18,10 +18,10 @@ class ClickerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func onTGR(_ sender: UITapGestureRecognizer) {
+    @IBAction func screenTapped(_ sender: Any) {
+
         count += 1
-        
-        counterLabel.text = "\(count)"
+        clickerLabel.text = "\(count)"
     }
     
 }
