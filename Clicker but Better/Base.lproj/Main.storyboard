@@ -21,11 +21,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to count to 20 as fast as you can" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqN-Y1-g44">
+                                <rect key="frame" x="67" y="807" width="281" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="BNx-ev-XbR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0MK-KK-6U1"/>
+                            <constraint firstItem="wqN-Y1-g44" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RWE-aO-r8B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wqN-Y1-g44" secondAttribute="bottom" constant="34" id="Tu5-LN-a3F"/>
                             <constraint firstItem="BNx-ev-XbR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Vmv-5q-2OF"/>
                             <constraint firstItem="BNx-ev-XbR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bq6-08-rQf"/>
                         </constraints>
@@ -36,6 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="clickerLabel" destination="BNx-ev-XbR" id="1sa-yf-XPZ"/>
+                        <outlet property="instructionLabel" destination="wqN-Y1-g44" id="UmQ-E4-8dz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -45,7 +54,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
