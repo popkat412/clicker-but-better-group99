@@ -20,6 +20,13 @@ class TimingsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        if let loadedTimings = Timing.loadFromFile() {
+            print("Found file! Loading timings!")
+            timings = loadedTimings
+        } else {
+            print("No timings 😢")
+        }
     }
 
     // MARK: - Table view data source
@@ -87,6 +94,7 @@ class TimingsTableViewController: UITableViewController {
             let sourceViewController = unwindSegue.source
             if let source = sourceViewController as? ClickerViewController {
                 timings.append(source.timing)
+                Timing.saveToFile(timings: timings)
                 tableView.reloadData()
             }
         }
