@@ -10,7 +10,7 @@ import UIKit
 
 class TimingsTableViewController: UITableViewController {
     
-    var timings = [1.0, 2.0]
+    var timings = [Timing]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,11 @@ class TimingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "timingCell", for: indexPath)
 
-        cell.textLabel?.text = "\(timings[indexPath.row])s"
+        cell.textLabel?.text = "\(timings[indexPath.row].timeTaken)s"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = " h:mm:ss a, yyyy/MM/dd"
+        cell.detailTextLabel?.text = "\(dateFormatter.string(from: timings[indexPath.row].timestamp))"
 
         return cell
     }
@@ -77,9 +81,17 @@ class TimingsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
-
+    @IBAction func unwindToTableView(_ unwindSegue: UIStoryboardSegue) {
+        if unwindSegue.identifier == "unwindToTableView" {
+            let sourceViewController = unwindSegue.source
+            if let source = sourceViewController as? ClickerViewController {
+                timings.append(source.timing)
+                tableView.reloadData()
+            }
+        }
+    }
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.

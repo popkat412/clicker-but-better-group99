@@ -12,11 +12,14 @@ class ClickerViewController: UIViewController {
 
     @IBOutlet weak var clickerLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     var count = 0
     var secondsPassed = 0.0
     
     var timer: Timer!
+    
+    var timing: Timing!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,7 @@ class ClickerViewController: UIViewController {
             self.secondsPassed += 0.1
             print("Updating timer: \(self.secondsPassed)")
         }
+        backButton.isHidden = true
     }
 
     @IBAction func screenTapped(_ sender: Any) {
@@ -33,8 +37,11 @@ class ClickerViewController: UIViewController {
         
         if count >= 20 {
             timer.invalidate()
-            clickerLabel.text = "You took \(round(secondsPassed * 100) / 100)s"
+            secondsPassed = round(secondsPassed * 100) / 100
+            clickerLabel.text = "You took \(secondsPassed)s"
+            timing = Timing(timeTaken: secondsPassed, timestamp: Date())
             instructionLabel.isHidden = true
+            backButton.isHidden = false
         }
     }
     
